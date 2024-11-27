@@ -1,0 +1,367 @@
+/* Estilização Geral */
+
+header {
+    background-color: #d32121; /* Cor personalizada (verde claro) */
+}
+.section {
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: 0.5s;
+}
+/* Botão de som */
+
+
+/* Main1 Melhorada */
+#main1 .text-start h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#main1 .text-start p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+}
+
+
+
+/* Estilo para a Main1 */
+#main1 {
+    padding: 60px 0; /* Espaçamento vertical */
+ 
+}
+
+#main1 h1 {
+    font-size: 2.5rem; /* Tamanho maior para destaque */
+    font-weight: bold;
+    color: #ff0000; /* Azul primário */
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out forwards; /* Mantém o estado final */
+}
+
+#main1 p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555; /* Cinza escuro para legibilidade */
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out forwards; /* Mantém o estado final */
+}
+
+#main1 p.lead {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #333; /* Cinza médio */
+}
+
+#main1 .carousel {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Cantos arredondados */
+    overflow: hidden; /* Para manter o carrossel contido */
+    animation: fadeIn 2s ease-in-out forwards; /* Mantém o estado final */
+}
+
+#main1 .carousel img {
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    height: 100%; /* Garante que a altura seja respeitada */
+}
+
+#main1 .carousel-control-prev-icon,
+#main1 .carousel-control-next-icon {
+    filter: invert(1); /* Ícones brancos para contraste */
+}
+
+/* Animação de Fade-In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Estilo geral para a seção main2 */
+#main2 {
+    background-color: #4b0e0e; /* Cor de fundo clara */
+    padding: 50px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+    border-top: 5px solid #ff0000; /* Borda superior com cor primária */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar a seção */
+    margin-top: 50px; /* Espaço acima da seção */
+}
+
+/* Estilo do título da seção */
+#main2 h2 {
+    font-family: 'Roboto Slab', serif; /* Fonte mais elegante */
+    font-size: 2.5em; /* Tamanho maior para o título */
+    color: #2c3e50; /* Cor do texto (cinza escuro) */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Estilo de parágrafos dentro de main2 */
+#main2 p {
+    font-size: 1.2em; /* Tamanho do texto */
+    color: #34495e; /* Cor de texto mais suave */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+    max-width: 800px; /* Limita a largura máxima do texto */
+    margin: 0 auto 20px; /* Centraliza o texto e adiciona espaço abaixo */
+}
+
+
+/* Estilos para um layout de 2 colunas dentro de main2 */
+#main2 .row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que as colunas se ajustem no mobile */
+    gap: 30px; /* Espaçamento entre as colunas */
+}
+
+#main2 .row .column {
+    flex: 1 1 calc(50% - 30px); /* Ajusta o tamanho das colunas */
+    max-width: 500px; /* Limita a largura máxima das colunas */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    /* Em telas menores, o layout das colunas muda para uma coluna */
+    #main2 .row {
+        flex-direction: column;
+    }
+
+    #main2 .row .column {
+        flex: 1 1 100%; /* As colunas ocupam 100% da largura */
+        max-width: 100%; /* Sem limite de largura */
+    }
+}
+
+/* Estilo para imagens dentro de main2 */
+#main2 img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem a largura */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    border-radius: 8px; /* Borda arredondada nas imagens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para as imagens */
+    margin-bottom: 20px; /* Espaço abaixo das imagens */
+}
+
+
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    text-align: center;
+    height: 650px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item iframe {
+    margin-top: 20px;
+}
+
+
+
+/* CSS para as animações de fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.fade-in.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.fade-in.delay-2 {
+    animation-delay: 1s;
+}
+
+.fade-in.delay-3 {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos adicionais para as seções */
+.section {
+    padding: 50px 0;
+}
+
+
+#main3 {
+    padding: 50px 0;
+}
+
+.effect-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tilted-container {
+   
+    margin: 0 20px;
+    position: relative;
+}
+
+.tilted-box {
+    background-color: #343a40; /* Cor do fundo do container */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.tilted-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.tilted-box img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do container */
+    height: auto;
+    border-radius: 8px;
+}
+
+.outside-phrase {
+    margin-top: 40px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    color: #fd0000; /* Cor vibrante para a frase */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.outside-phrase p {
+    margin: 0;
+}
+
+.final-phrase {
+    margin-top: 50px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    color: #ff6b6b; /* Cor vibrante para a frase */
+}
+
+.final-phrase p {
+    margin: 0;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.delay-1 {
+    animation-delay: 1s;
+}
+
+.delay-2 {
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    #main3 {
+        padding: 30px 0;
+    }
+
+    .effect-container {
+        flex-direction: column; /* Alinha os containers na coluna */
+        margin-top: 30px;
+    }
+
+    .tilted-container {
+        margin: 10px 0; /* Ajusta a margem para dispositivos menores */
+    }
+
+    .tilted-box {
+        padding: 20px;
+    }
+
+    .tilted-text {
+        font-size: 1.2rem; /* Ajusta o tamanho do texto */
+    }
+
+    .outside-phrase {
+        font-size: 1.4rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .final-phrase {
+        font-size: 1.4rem; /* Ajusta o tamanho da fonte */
+    }
+}
+
+/* Media Query para telas muito pequenas */
+@media (max-width: 480px) {
+    .tilted-text {
+        font-size: 1rem; /* Reduz o tamanho do texto em telas muito pequenas */
+    }
+
+    .outside-phrase, .final-phrase {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte das frases */
+    }
+
+    .tilted-box {
+        padding: 15px;
+    }
+
+    .effect-container {
+        margin-top: 20px;
+    }
+}
